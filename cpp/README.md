@@ -1,5 +1,6 @@
+# C++ cookbook
 
-# Install
+## Install
 
 ```shell
 brew install cmake, llvm
@@ -10,16 +11,13 @@ ln -s "$(brew --prefix llvm)/bin/clang-tidy" "/usr/local/bin/clang-tidy"
 ```
 
 
-# Build
+## Build
 
 ```shell
 clang++ main.cpp -std=c++17 -Wall -Wextra -Wpedantic
 ```
 
-# Run
+## Run
 
-# Lint + format
+## Lint + format
 
-
-
-# Debug
