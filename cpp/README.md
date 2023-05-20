@@ -14,10 +14,15 @@ ln -s "$(brew --prefix llvm)/bin/clang-tidy" "/usr/local/bin/clang-tidy"
 ## Build
 
 ```shell
-clang++ main.cpp -std=c++17 -Wall -Wextra -Wpedantic
+cmake -S . -B build
+cmake --build build
 ```
 
 ## Run
+
+```shell
+./build/main
+```
 
 ## Lint + format
 
