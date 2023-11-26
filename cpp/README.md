@@ -26,3 +26,7 @@ cmake --build build
 
 ## Lint + format
 
+```shell
+clang-tidy main.cpp -extra-arg=-std=c++20 -p build --
+fd . -e cpp -e hpp src/ | xargs clang-format -i
+```

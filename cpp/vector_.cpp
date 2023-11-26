@@ -33,7 +33,7 @@ class Vector {
         std::copy(list.begin(), list.end(), data_);
     }
     /// Constructs a vector with the given capacity.
-    Vector<T>(std::size_t capacity) {
+    explicit Vector<T>(std::size_t capacity) {
         data_ = new T[capacity];
         size_ = 0;
         capacity_ = capacity;

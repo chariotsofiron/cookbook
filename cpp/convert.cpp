@@ -1,7 +1,7 @@
 #include <iostream>  // cout, endl
 #include <string>    // std::string
 
-// convert string to integer
+/// Converts a string to an integer
 auto convert_string_to_int(std::string_view str) -> int {
     try {
         return std::stoi(std::string(str));

@@ -24,7 +24,7 @@ add_compile_options(
 
 
 ## Executable
-add_executable(${PROJECT_NAME} vector_.cpp)
+add_executable(${PROJECT_NAME} randomized/reservoir_sampling.cpp)
 
 
 ## Dependencies
