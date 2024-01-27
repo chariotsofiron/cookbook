@@ -1,0 +1,8 @@
+
+format:
+    ruff format .
+    ruff --fix .
+
+check:
+    ruff .
+    pyright

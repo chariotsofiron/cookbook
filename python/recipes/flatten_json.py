@@ -1,8 +1,13 @@
-def flatten_json(y, prefix=""):
-    """flatten json/dict containing inner dicts and lists"""
+"""Flatten json."""
+
+from typing import Any
+
+
+def flatten_json(y: dict[str, Any], prefix: str = "") -> dict[str, Any]:
+    """Flattens json/dict containing inner dicts and lists."""
     out = {}
 
-    def flatten(element, name=""):
+    def flatten(element: dict[str, Any], name: str = "") -> None:
         if isinstance(element, dict):
             for a in element:
                 flatten(element[a], name + a + "_")

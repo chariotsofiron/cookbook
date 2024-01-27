@@ -7,22 +7,24 @@ import sys
 import termios
 
 
-def get_key(blocking: bool = True) -> str:
-    """Get currently pressed key.
+def get_key(blocking: bool = True) -> str:  # noqa: FBT001 FBT002
+    """Returns currently pressed key.
+
     - https://stackoverflow.com/a/13207724/9518712
     - http://effbot.org/pyfaq/how-do-i-get-a-single-keypress-at-a-time.htm
 
-    :param blocking: whether to wait for a key press
-    :return: The currently pressed key
+    # Arguments
+
+    - blocking - whether to wait for a key press
     """
     file_descriptor = sys.stdin.fileno()
     oldterm = termios.tcgetattr(file_descriptor)
     newattr = oldterm[:]
     newattr[3] = newattr[3] & ~termios.ICANON & ~termios.ECHO
-    # turns off stdin’s echoing and disables canonical mode
+    # turns off stdin's echoing and disables canonical mode
     termios.tcsetattr(file_descriptor, termios.TCSANOW, newattr)
     oldflags = fcntl.fcntl(file_descriptor, fcntl.F_GETFL)
-    # obtain stdin’s file descriptor flags and modify them for non-blocking mode
+    # obtain stdin's file descriptor flags and modify them for non-blocking mode
     fcntl.fcntl(file_descriptor, fcntl.F_SETFL, oldflags | os.O_NONBLOCK)
 
     if blocking:
@@ -37,11 +39,10 @@ def get_key(blocking: bool = True) -> str:
 
 
 def read_clipboard() -> str:
-    """Get the contents of the system clipboard.
-
-    :return: The system clipboard as a string
-    """
-    with subprocess.Popen(["pbpaste"], stdout=subprocess.PIPE) as process:
+    """Returns the the contents of the system clipboard."""
+    with subprocess.Popen(
+        "/usr/bin/pbpaste", stdout=subprocess.PIPE
+    ) as process:
         process.wait()
         if process.stdout:
             clipboard = process.stdout.read().decode("utf-8")
