@@ -1,26 +1,26 @@
-"""Depth first search.
+"""Breadth first search.
 
-- <https://en.wikipedia.org/wiki/Depth-first_search>
+- <https://en.wikipedia.org/wiki/Breadth-first_search>
 """
 import typing
 
 V = typing.TypeVar("V")
 
 
-def dfs(graph: dict[V, list[V]], start: V) -> list[V]:
-    """Depth first search.
+def bfs(graph: dict[V, list[V]], start: V) -> list[V]:
+    """Breadth first search.
 
     Time: O(|V| + |E|)
     """
     seen = set()
     path = []
-    stack = [start]
-    while stack:
-        current = stack.pop()
+    queue = [start]
+    while queue:
+        current = queue.pop(0)
         if current not in seen:
             seen.add(current)
             path.append(current)
-            stack.extend(graph[current])
+            queue.extend(graph[current])
     return path
 
 
@@ -34,7 +34,7 @@ def test() -> None:
         "E": ["B", "F"],
         "F": ["C", "E"],
     }
-    assert dfs(graph, "C") == ["C", "F", "E", "B", "D", "A"]
+    assert bfs(graph, "C") == ["C", "A", "F", "B", "E", "D"]
 
 
 if __name__ == "__main__":
