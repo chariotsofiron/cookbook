@@ -1,9 +1,5 @@
-# Programming cookbook
+# Cookbook
 
-- How to set up development environment
-- How to perform basic tasks
+Idiomatic implementations of data structures, algorithms, and recipes in various languages. Meant to be used as a reference, not a library.
 
-## See also
-
-- https://rosettacode.org/wiki/
-- https://www.programming-idioms.org/
+Implementations are strictly formatted, linted, typechecked, and tested.

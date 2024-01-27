@@ -1,6 +1,7 @@
 
 /// https://en.wikipedia.org/wiki/Reservoir_sampling
 #include <fmt/core.h>  // fmt::println
+#include <fmt/ranges.h>
 #include <fmt/ostream.h>  // fmt::join
 
 #include <random>  // std::uniform_int_distribution
