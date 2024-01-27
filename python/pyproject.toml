@@ -9,6 +9,7 @@ ignore = [
   "INP001", # add __init__.py
   "S603",   # subprocess-without-shell-equals-true #4045
   "RET504",  # unnecessary assign to clipboard
+  "S101", # allow asserts, used for tests
   # formatting
   "COM812", # trailing comma missing
   "D203",   # one-blank-line-before-class

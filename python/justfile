@@ -6,3 +6,6 @@ format:
 check:
     ruff .
     pyright
+
+test:
+    fd -e py | xargs pytest
