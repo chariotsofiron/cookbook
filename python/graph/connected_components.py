@@ -5,7 +5,10 @@ V = TypeVar("V")
 
 
 def connected(graph: dict[V, list[V]]) -> Iterator[list[V]]:
-    """Returns an iterator over lists of connected components."""
+    """Returns an iterator over lists of connected components.
+
+    Time: O(|V| + |E|)
+    """
     seen = set()
 
     def dfs(node: V) -> list[V]:
