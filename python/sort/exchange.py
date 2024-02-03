@@ -1,17 +1,21 @@
-"""Bubble sort."""
+"""Exchange sort.
+
+- <https://arxiv.org/pdf/2110.01111.pdf>
+- <https://news.ycombinator.com/item?id=28758106>
+"""
 import pytest
 
 
-def bubble_sort(arr: list[int]) -> None:
-    """Sorts an array in-place using bubble sort.
+def exchange_sort(arr: list[int]) -> None:
+    """Sorts an array in-place using exchange sort.
 
     Time: O(n^2)
     Space: O(1)
     """
     for i in range(len(arr)):
-        for j in range(len(arr) - i - 1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+        for j in range(len(arr)):
+            if arr[i] < arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
 
 
 @pytest.mark.parametrize(
@@ -33,5 +37,5 @@ def bubble_sort(arr: list[int]) -> None:
 )
 def test(arr: list[int]) -> None:
     """Run test cases."""
-    bubble_sort(arr)
+    exchange_sort(arr)
     assert arr == sorted(arr)

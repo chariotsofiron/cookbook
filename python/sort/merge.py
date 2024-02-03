@@ -6,6 +6,7 @@ list of one element is considered sorted).
 produce new sorted sublists until there is only one sublist remaining. This
 will be the sorted list.
 """
+import pytest
 
 
 def merge_sort(arr: list[int]) -> list[int]:
@@ -43,3 +44,26 @@ def merge_sort(arr: list[int]) -> list[int]:
         j += 1
         k += 1
     return arr
+
+
+@pytest.mark.parametrize(
+    "arr",
+    [
+        ([]),
+        ([1]),
+        ([1, 2]),
+        ([1, 2, 3]),
+        ([1, 2, 3, 4]),
+        ([2, 1, 3, 4]),
+        ([1, 3, 2, 4]),
+        ([1, 2, 4, 3]),
+        ([2, 1, 1, 1]),
+        ([1, 2, 1, 1]),
+        ([1, 1, 2, 1]),
+        ([1, 1, 1, 2]),
+    ],
+)
+def test(arr: list[int]) -> None:
+    """Run test cases."""
+    merge_sort(arr)
+    assert arr == sorted(arr)
