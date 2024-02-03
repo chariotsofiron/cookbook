@@ -2,18 +2,19 @@
 line-length = 80
 select = ["ALL"]
 ignore = [
-  "ANN101", # missing-type-self
-  "D213",   # multi-line-summary-second-line
-  "D401",   # imperative mood
-  "FA102",  # future-required-type-annotation
-  "INP001", # add __init__.py
-  "S603",   # subprocess-without-shell-equals-true #4045
+  "ANN101",  # missing-type-self
+  "D213",    # multi-line-summary-second-line
+  "D401",    # imperative mood
+  "FA102",   # future-required-type-annotation
+  "INP001",  # add __init__.py
+  "S603",    # subprocess-without-shell-equals-true #4045
   "RET504",  # unnecessary assign to clipboard
-  "S101", # allow asserts, used for tests
+  "S101",    # allow asserts, used for tests
+  "S311",    # suspicious-non-cryptographic-random-usage
   # formatting
-  "COM812", # trailing comma missing
-  "D203",   # one-blank-line-before-class
-  "D213",   # multi-line-summary-second-line
-  "ISC001", # single-line-implicit-string-concatenation
+  "COM812",  # trailing comma missing
+  "D203",    # one-blank-line-before-class
+  "D213",    # multi-line-summary-second-line
+  "ISC001",  # single-line-implicit-string-concatenation
   
 ]
