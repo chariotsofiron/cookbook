@@ -43,9 +43,7 @@ def level_order(root: TreeNode) -> Iterator[int]:
     while queue:
         current = queue.pop(0)
         yield current.data
-        for child in (current.left, current.right):
-            if child is not None:
-                next_level.append(child)
+        next_level.extend(x for x in (current.left, current.right) if x)
         if not queue:
             queue.extend(next_level)
             next_level = []
@@ -62,6 +60,7 @@ def test() -> None:
     assert list(pre_order(root)) == [5, 2, 3, 4, 6, 7, 8]
     assert list(in_order(root)) == [2, 3, 4, 5, 6, 7, 8]
     assert list(post_order(root)) == [2, 3, 4, 6, 7, 8, 5]
+    assert list(level_order(root)) == [5, 3, 7, 2, 4, 6, 8]
 
 
 if __name__ == "__main__":
