@@ -1,5 +1,7 @@
 [tool.ruff]
 line-length = 80
+
+[tool.ruff.lint]
 select = ["ALL"]
 ignore = [
   "ANN101",  # missing-type-self
