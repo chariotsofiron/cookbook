@@ -1,9 +1,9 @@
-"""Double-ended queue."""
+"""Double-ended deque."""
 from typing import Iterator
 
 
 class Deque:
-    """Double ended queue."""
+    """Double ended deque."""
 
     def __init__(self) -> None:
         """Constructs a deque with a capacity of 0."""
@@ -13,7 +13,7 @@ class Deque:
         self.size: int = 0
 
     def __len__(self) -> int:
-        """Returns the number of items in the queue."""
+        """Returns the number of items in the deque."""
         return self.size
 
     def is_empty(self) -> bool:
@@ -24,7 +24,7 @@ class Deque:
         return self.size == len(self.items)
 
     def resize(self, capacity: int) -> None:
-        """Resizes the queue with the given capacity."""
+        """Resizes the deque with the given capacity."""
         tmp = list(iter(self))
         tmp.extend([0] * capacity)
         self.items = tmp
@@ -32,7 +32,7 @@ class Deque:
         self.back = self.size
 
     def push_back(self, item: int) -> None:
-        """Pushes an item to the back of the queue."""
+        """Pushes an item to the back of the deque."""
         if self._is_full():
             self.resize(max(len(self.items) * 2, 1))
 
@@ -41,7 +41,7 @@ class Deque:
         self.size += 1
 
     def push_front(self, item: int) -> None:
-        """Pushes an item to the front of the queue."""
+        """Pushes an item to the front of the deque."""
         if self._is_full():
             self.resize(max(len(self.items) * 2, 1))
 
@@ -50,7 +50,7 @@ class Deque:
         self.size += 1
 
     def pop_back(self) -> int | None:
-        """Pop an item from the back of the queue."""
+        """Pop an item from the back of the deque."""
         if self.is_empty():
             return None
         self.back = (self.back - 1) % len(self.items)
@@ -59,7 +59,7 @@ class Deque:
         return item
 
     def pop_front(self) -> int | None:
-        """Pop an item from the front of the queue."""
+        """Pop an item from the front of the deque."""
         if self.is_empty():
             return None
         item = self.items[self.front]
@@ -68,7 +68,7 @@ class Deque:
         return item
 
     def __getitem__(self, index: int) -> int | None:
-        """Returns the item at the given index from the front of the queue."""
+        """Returns the item at the given index from the front of the deque."""
         if self.is_empty():
             return None
 
@@ -84,20 +84,20 @@ class Deque:
 
 def test() -> None:
     """Runs test cases."""
-    queue = Deque()
-    queue.push_back(1)
-    queue.push_back(2)
-    queue.push_back(3)
-    queue.push_back(4)
-    assert list(iter(queue)) == [1, 2, 3, 4]
+    deque = Deque()
+    deque.push_back(1)
+    deque.push_back(2)
+    deque.push_back(3)
+    deque.push_back(4)
+    assert list(iter(deque)) == [1, 2, 3, 4]
 
-    queue = Deque()
-    queue.push_front(2)
-    queue.push_back(3)
-    queue.push_front(1)
-    queue.push_back(4)
-    assert list(iter(queue)) == [1, 2, 3, 4]
+    deque = Deque()
+    deque.push_front(2)
+    deque.push_back(3)
+    deque.push_front(1)
+    deque.push_back(4)
+    assert list(iter(deque)) == [1, 2, 3, 4]
 
-    queue.pop_front()
-    queue.pop_back()
-    assert list(iter(queue)) == [2, 3]
+    deque.pop_front()
+    deque.pop_back()
+    assert list(iter(deque)) == [2, 3]
