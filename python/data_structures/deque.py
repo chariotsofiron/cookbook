@@ -6,7 +6,7 @@ class Deque:
     """Double ended queue."""
 
     def __init__(self) -> None:
-        """Constructs a queue with a capacity of 0."""
+        """Constructs a deque with a capacity of 0."""
         self.items = []
         self.front: int = 0
         self.back: int = 0
