@@ -19,11 +19,11 @@ def hanoi(n_discs: int) -> Iterator[tuple[int, int]]:
 def test() -> None:
     """Run tests."""
     assert list(hanoi(3)) == [
-        (0, 1),
         (0, 2),
-        (1, 2),
         (0, 1),
-        (2, 0),
         (2, 1),
-        (0, 1),
+        (0, 2),
+        (1, 0),
+        (1, 2),
+        (0, 2),
     ]
