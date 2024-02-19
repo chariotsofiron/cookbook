@@ -6,6 +6,7 @@ in terms of the subtract and branch if equal or lower (subleq) operator.
 - <https://en.wikipedia.org/wiki/One_instruction_set_computer>
 - <https://stackoverflow.com/questions/2982729/is-it-possible-to-implement-bitwise-operators-using-integer-arithmetic>
 """
+import pytest
 
 
 def my_sub(minuend: int, subtrahend: int) -> int:
@@ -96,12 +97,9 @@ def my_xor(arg1: int, arg2: int) -> int:
     return result
 
 
+@pytest.mark.parametrize(("arg1", "arg2"), [(5, 3)])
 def test(arg1: int, arg2: int) -> None:
     """Tests the logic operations."""
     assert arg1 & arg2 == my_and(arg1, arg2)
     assert arg1 | arg2 == my_or(arg1, arg2)
     assert arg1 ^ arg2 == my_xor(arg1, arg2)
-
-
-if __name__ == "__main__":
-    test(5, 3)
