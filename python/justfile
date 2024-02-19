@@ -8,4 +8,4 @@ check:
     pyright
 
 test:
-    fd -e py | xargs pytest
+    python3 -m pytest

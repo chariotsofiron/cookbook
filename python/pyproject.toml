@@ -19,3 +19,6 @@ ignore = [
   "D213",    # multi-line-summary-second-line
   "ISC001",  # single-line-implicit-string-concatenation
 ]
+
+[tool.pytest.ini_options]
+python_files = ["*.py"]  # search for tests in all python files
