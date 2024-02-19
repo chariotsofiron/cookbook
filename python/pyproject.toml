@@ -13,10 +13,10 @@ ignore = [
   "RET504",  # unnecessary assign to clipboard
   "S101",    # allow asserts, used for tests
   "S311",    # suspicious-non-cryptographic-random-usage
+  "T201",    # print found
   # formatting
   "COM812",  # trailing comma missing
   "D203",    # one-blank-line-before-class
   "D213",    # multi-line-summary-second-line
   "ISC001",  # single-line-implicit-string-concatenation
-  
 ]
