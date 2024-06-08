@@ -13,6 +13,7 @@ ignore = [
   "S101",    # allow asserts, used for tests
   "S311",    # suspicious-non-cryptographic-random-usage
   "T201",    # print found
+  "FBT003",  # boolean positional value in function call
   # formatting
   "COM812",  # trailing comma missing
   "D203",    # one-blank-line-before-class

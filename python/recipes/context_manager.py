@@ -5,14 +5,8 @@
 with blah as a:
     stuff
 """
-from __future__ import annotations
-
-import typing
-
-from typing_extensions import Self
-
-if typing.TYPE_CHECKING:
-    from types import TracebackType
+from types import TracebackType
+from typing import Self
 
 
 class Foo:
