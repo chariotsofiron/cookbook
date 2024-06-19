@@ -35,6 +35,6 @@ def common_prefix(strings: list[str]) -> str:
         (["flower", "flow", "flight"], "fl"),
     ],
 )
-def test(test_input: str, expected: str) -> None:
+def test(test_input: list[str], expected: str) -> None:
     """Runs the test cases."""
     assert common_prefix(test_input) == expected
