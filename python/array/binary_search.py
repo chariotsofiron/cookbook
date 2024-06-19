@@ -11,7 +11,7 @@ from typing import Sequence
 import pytest
 
 
-def binary_search(arr: Sequence[int], target: int) -> int| None:
+def binary_search(arr: Sequence[int], target: int) -> int | None:
     """Returns the index of the target in the array if it exists.
 
     arr must be sorted, O(nlogn)
@@ -62,4 +62,4 @@ def binary_search_recur(
 def test(arr: list[int], target: int, expected: int) -> None:
     """Runs the test cases."""
     assert binary_search(arr, target) == expected
-    assert binary_search_recur(arr, target, 0, len(arr)-1) == expected
+    assert binary_search_recur(arr, target, 0, len(arr) - 1) == expected
