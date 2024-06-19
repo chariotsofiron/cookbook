@@ -1,4 +1,5 @@
 """Stars and bars."""
+
 import itertools
 from typing import Iterator
 

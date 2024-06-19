@@ -6,7 +6,16 @@ def floodfill(
 ) -> None:
     """Flood fills a matrix in-place.
 
+    Args:
+    ----
+    grid: the grid to fill
+    i: row index
+    j: column index
+    before: value to be replaced
+    after: value to replace with
+
     Time: O(n) where n is the number of cells in the grid
+
     """
     if grid[i][j] == before:
         grid[i][j] = after

@@ -17,6 +17,7 @@ You lose :(
 The number I was thinking of was 6
 ```
 """
+
 #
 from random import choice
 

@@ -1,4 +1,5 @@
 """Reverse a linked list."""
+
 from data_structures.linked_list import ListNode
 
 

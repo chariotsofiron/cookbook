@@ -6,6 +6,7 @@ in terms of the subtract and branch if equal or lower (subleq) operator.
 - <https://en.wikipedia.org/wiki/One_instruction_set_computer>
 - <https://stackoverflow.com/questions/2982729/is-it-possible-to-implement-bitwise-operators-using-integer-arithmetic>
 """
+
 import pytest
 
 

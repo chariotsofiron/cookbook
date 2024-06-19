@@ -1,4 +1,5 @@
 """Argparse snippets."""
+
 import argparse
 import pathlib
 

@@ -17,6 +17,7 @@ Conditions:
 
 - <https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm>
 """
+
 import heapq
 from typing import TypeVar
 

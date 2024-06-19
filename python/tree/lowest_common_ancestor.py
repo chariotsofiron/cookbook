@@ -2,6 +2,7 @@
 
 find lowest common ancestor of two nodes in a tree
 """
+
 from __future__ import annotations
 
 from typing import NamedTuple

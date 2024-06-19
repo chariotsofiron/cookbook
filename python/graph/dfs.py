@@ -2,6 +2,7 @@
 
 - <https://en.wikipedia.org/wiki/Depth-first_search>
 """
+
 import typing
 
 V = typing.TypeVar("V")

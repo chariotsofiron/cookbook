@@ -1,4 +1,5 @@
 """Bubble sort."""
+
 import pytest
 
 

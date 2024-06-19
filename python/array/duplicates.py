@@ -1,13 +1,19 @@
 """Find duplicates."""
-from typing import Iterable
+
+from typing import Iterable, MutableSequence
 
 import pytest
 
 
-def solve_bounded(nums: list[int]) -> int | None:
+def solve_bounded(nums: MutableSequence[int]) -> int | None:
     """Returns the first duplicate element if it exists.
 
-    - We can shift the bound by making the list longer if needed.
+    Precondition: 1 <= x <= len(nums) for all x in nums
+
+    Uses the sign of a number to mark it as seen
+
+    - We can shift the bound by making the list longer if needed
+    - e.g. if bound is n, append extra zeroes as necessary
     - Modifies the list. Can be restored with an additional pass that
     makes every number positive
 

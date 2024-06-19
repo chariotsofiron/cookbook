@@ -3,6 +3,7 @@
 - <https://en.wikipedia.org/wiki/Bresenham's_line_algorithm>
 - <https://rosettacode.org/wiki/Bitmap/Bresenham%27s_line_algorithm#C++>
 """
+
 from typing import Iterator
 
 import pytest

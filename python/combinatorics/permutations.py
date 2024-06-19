@@ -1,4 +1,5 @@
 """Generate all permutations of n items."""
+
 import itertools
 from typing import Iterator
 
@@ -47,7 +48,7 @@ def permute_heap(arr: list[int], k: int) -> Iterator[tuple[int, ...]]:
     ],
 )
 def test(test_input: list[int], n: int) -> None:
-    """Runs test case."""
+    """Runs the test cases."""
     expected = list(itertools.permutations(test_input))
     assert sorted(permute_heap(test_input, n)) == expected
     assert sorted(permute2(test_input, n)) == expected

@@ -1,5 +1,13 @@
 """Disjoint set.
 
+It provides operations for
+- adding new sets
+- merging sets (replacing them by their union)
+- finding a representative member of a set.
+
+The last operation makes it possible to find out efficiently if any two
+elements are in the same or different sets.
+
 - <https://en.wikipedia.org/wiki/Disjoint-set_data_structure>
 """
 

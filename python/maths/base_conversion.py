@@ -2,6 +2,7 @@
 
 - <https://bradfieldcs.com/algos/stacks/converting-number-bases/>
 """
+
 import pytest
 
 SYMBOLS = "0123456789abcdefghijklmnopqrstuvwxyz"

@@ -2,6 +2,7 @@
 
 - <https://en.wikipedia.org/wiki/Collatz_conjecture>
 """
+
 from typing import Iterator
 
 

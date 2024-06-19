@@ -8,6 +8,7 @@ weighted undirected graph
 - <https://en.wikipedia.org/wiki/Prim%27s_algorithm>
 - <https://bradfieldcs.com/algos/graphs/prims-spanning-tree-algorithm/>
 """
+
 from collections import defaultdict
 from heapq import heapify, heappop, heappush
 from typing import TypeVar

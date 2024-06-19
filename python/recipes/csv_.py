@@ -1,4 +1,5 @@
 """Snippets for handling csv files in Python."""
+
 import csv
 from pathlib import Path
 from typing import Any, Iterable

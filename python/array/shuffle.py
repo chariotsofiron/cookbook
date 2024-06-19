@@ -1,4 +1,5 @@
 """Generate a random permutation of a finite sequence."""
+
 import random
 
 

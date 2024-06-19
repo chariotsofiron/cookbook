@@ -1,4 +1,5 @@
 """Different traversals of a binary tree."""
+
 from __future__ import annotations
 
 from typing import Iterator, NamedTuple

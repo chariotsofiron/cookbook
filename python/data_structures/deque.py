@@ -1,4 +1,8 @@
-"""Double-ended deque."""
+"""Double-ended deque.
+
+Can be made a circular queue by popping when getting to a certain size.
+"""
+
 from typing import Iterator
 
 

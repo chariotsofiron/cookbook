@@ -6,6 +6,7 @@ list of one element is considered sorted).
 produce new sorted sublists until there is only one sublist remaining. This
 will be the sorted list.
 """
+
 import pytest
 
 

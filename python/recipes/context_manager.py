@@ -5,6 +5,7 @@
 with blah as a:
     stuff
 """
+
 from types import TracebackType
 from typing import Self
 

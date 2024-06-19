@@ -1,4 +1,5 @@
 """Check if a tree is a BST."""
+
 from __future__ import annotations
 
 from typing import NamedTuple

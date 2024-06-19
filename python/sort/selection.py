@@ -8,6 +8,7 @@ we are continuously grabbing the smallest unsorted element and placing it in
 sorted order in the sorted sublist. This process continues iteratively until
 the list is fully sorted.
 """
+
 import pytest
 
 

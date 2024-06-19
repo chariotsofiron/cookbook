@@ -6,6 +6,7 @@ fn+1 = fn + fn-1, with f(0) = 1, and f(1) = 1
 
 - <https://en.wikipedia.org/wiki/Fibonacci_number>
 """
+
 import functools
 import math
 

@@ -1,4 +1,5 @@
 """Find all the connected components in a directed graph."""
+
 from typing import Iterator, TypeVar
 
 V = TypeVar("V")
