@@ -1,11 +1,15 @@
+# setup virtual environment and install dependencies
+setup:
+  python3 -m venv .venv
+  ./.venv/bin/pip install -r requirements.txt
 
 format:
     ruff format .
-    ruff --fix .
+    ruff check --fix .
 
 check:
-    ruff .
+    ruff check .
     pyright
 
 test:
-    python3 -m pytest
+    ./.venv/bin/python -m pytest
