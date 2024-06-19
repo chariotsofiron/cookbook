@@ -67,7 +67,3 @@ def test() -> None:
     box.union(5, 6)
     box.union(2, 6)
     assert box.are_synonymous(1, 6)
-
-
-if __name__ == "__main__":
-    test()

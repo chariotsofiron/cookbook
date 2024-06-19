@@ -56,7 +56,3 @@ def test() -> None:
     lca = lowest_common_ancestor(root, a, b)
     assert lca is not None
     assert lca.data == root.data
-
-
-if __name__ == "__main__":
-    test()

@@ -62,7 +62,3 @@ def test() -> None:
     assert list(in_order(root)) == [2, 3, 4, 5, 6, 7, 8]
     assert list(post_order(root)) == [2, 3, 4, 6, 7, 8, 5]
     assert list(level_order(root)) == [5, 3, 7, 2, 4, 6, 8]
-
-
-if __name__ == "__main__":
-    test()

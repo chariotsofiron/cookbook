@@ -76,7 +76,3 @@ def test() -> None:
     prev = dijkstra(graph, 1)
     assert get_path(prev, 5) == [5]
     assert get_path(prev, 3) == [2, 4, 3]
-
-
-if __name__ == "__main__":
-    test()

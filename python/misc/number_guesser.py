@@ -59,7 +59,3 @@ def play_game(bound: int, upper: int | None = None) -> None:
 def main() -> None:
     """Main method."""
     play_game(10)
-
-
-if __name__ == "__main__":
-    main()

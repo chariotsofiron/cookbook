@@ -36,7 +36,3 @@ def test() -> None:
         "F": ["C", "E"],
     }
     assert dfs(graph, "C") == ["C", "F", "E", "B", "D", "A"]
-
-
-if __name__ == "__main__":
-    test()

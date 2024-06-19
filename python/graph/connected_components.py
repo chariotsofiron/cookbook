@@ -41,7 +41,3 @@ def test() -> None:
     graph = {"a": ["b"], "b": [], "c": ["d", "e"], "d": [], "e": []}
 
     assert list(connected(graph)) == [["a", "b"], ["c", "e", "d"]]
-
-
-if __name__ == "__main__":
-    test()

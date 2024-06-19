@@ -60,7 +60,3 @@ def test() -> None:
         "E": {"F": 1},
         "F": {"G": 1},
     }
-
-
-if __name__ == "__main__":
-    test()

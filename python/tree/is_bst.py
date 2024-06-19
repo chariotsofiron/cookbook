@@ -46,7 +46,3 @@ def test() -> None:
         TreeNode(7, TreeNode(6, None, None), TreeNode(8, None, None)),
     )
     assert is_bst(root)
-
-
-if __name__ == "__main__":
-    test()

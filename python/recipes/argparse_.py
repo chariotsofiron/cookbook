@@ -21,7 +21,3 @@ def main() -> None:
     parser.add_argument("--no-flag", destination="check", action="store_false")
 
     parser.parse_args()
-
-
-if __name__ == "__main__":
-    main()

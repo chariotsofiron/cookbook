@@ -62,7 +62,3 @@ def main() -> None:
         print(f"Iteration {i}:")
         print_board(board)
         board = next_state(board)
-
-
-if __name__ == "__main__":
-    main()
