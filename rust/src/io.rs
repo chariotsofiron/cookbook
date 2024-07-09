@@ -18,10 +18,3 @@ pub fn input(msg: &str) -> String {
     }
     buf
 }
-
-
-/// Reads a file and returns its contents as a string
-pub fn read_file(path: &str) -> String {
-    let data = std::fs::read_to_string(path).expect("Unable to read file");
-    data
-}
