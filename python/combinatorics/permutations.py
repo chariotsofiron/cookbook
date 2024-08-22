@@ -41,12 +41,7 @@ def permute_heap(arr: list[int], k: int) -> Iterator[tuple[int, ...]]:
             arr[i], arr[k - 1] = arr[k - 1], arr[i]
 
 
-@pytest.mark.parametrize(
-    ("test_input", "n"),
-    [
-        ([1, 2, 3], 3),
-    ],
-)
+@pytest.mark.parametrize(("test_input", "n"), [([1, 2, 3], 3)])
 def test(test_input: list[int], n: int) -> None:
     """Runs the test cases."""
     expected = list(itertools.permutations(test_input))

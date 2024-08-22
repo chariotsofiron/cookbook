@@ -21,5 +21,12 @@ ignore = [
   "ISC001",  # single-line-implicit-string-concatenation
 ]
 
+[tool.ruff.format]
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
+
 [tool.pytest.ini_options]
 python_files = ["*.py"]  # search for tests in all python files

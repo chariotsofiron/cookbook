@@ -54,10 +54,7 @@ def count_islands(grid: list[list[str]]) -> int:
 
 @pytest.mark.parametrize(
     ("test_input", "expected"),
-    [
-        ("11000\n11000\n00100\n00011", 3),
-        ("11110\n11010\n11000\n00000", 1),
-    ],
+    [("11000\n11000\n00100\n00011", 3), ("11110\n11010\n11000\n00000", 1)],
 )
 def test(test_input: str, expected: int) -> None:
     """Runs test cases."""

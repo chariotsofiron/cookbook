@@ -26,13 +26,7 @@ def stars_and_bars(n_items: int, n_bins: int) -> Iterator[list[int]]:
     ):
         yield [
             b - a - 1
-            for a, b in zip(
-                (-1, *combo),
-                (
-                    *combo,
-                    n_items + n_bins - 1,
-                ),
-            )
+            for a, b in zip((-1, *combo), (*combo, n_items + n_bins - 1))
         ]
 
 
