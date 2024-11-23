@@ -4,7 +4,7 @@
 - <https://en.wikipedia.org/wiki/3SUM>
 """
 
-from typing import Iterator, Sequence
+from collections.abc import Iterator, Sequence
 
 import pytest
 

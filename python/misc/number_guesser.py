@@ -18,7 +18,6 @@ The number I was thinking of was 6
 ```
 """
 
-#
 from random import choice
 
 
@@ -44,8 +43,7 @@ def play_game(bound: int, upper: int | None = None) -> None:
         if (
             upper - guess > guess - lower
             # if the ranges are equal, select random partition
-            or upper - guess == guess - lower
-            and choice((True, False))
+            or (upper - guess == guess - lower and choice((True, False)))
         ):
             lower = guess + 1
             print("Too low! Guess higher...")

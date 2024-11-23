@@ -11,7 +11,7 @@ Example:
 
 """
 
-from typing import Iterator
+from collections.abc import Iterator
 
 
 def _preprocess(pattern: str) -> dict[str, int]:
@@ -22,10 +22,7 @@ def _preprocess(pattern: str) -> dict[str, int]:
     space: O(m)
     where m is the size of the pattern.
     """
-    result = {}
-    for i, element in enumerate(pattern):
-        result[element] = i
-    return result
+    return {element: i for i, element in enumerate(pattern)}
 
 
 def boyer_moore(input_string: str, pattern: str) -> Iterator[int]:

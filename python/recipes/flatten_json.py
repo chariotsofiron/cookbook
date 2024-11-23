@@ -9,8 +9,8 @@ def flatten_json(y: dict[str, Any], prefix: str = "") -> dict[str, Any]:
 
     def flatten(element: dict[str, Any], name: str = "") -> None:
         if isinstance(element, dict):
-            for a in element:
-                flatten(element[a], name + a + "_")
+            for a, value in element.items():
+                flatten(value, name + a + "_")
         elif isinstance(element, list):
             for i, a in enumerate(element):
                 flatten(a, name + str(i) + "_")

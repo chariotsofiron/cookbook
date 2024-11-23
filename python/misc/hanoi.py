@@ -3,7 +3,7 @@
 - <https://en.wikipedia.org/wiki/Tower_of_Hanoi>
 """
 
-from typing import Iterator
+from collections.abc import Iterator
 
 
 def hanoi(n_discs: int) -> Iterator[tuple[int, int]]:

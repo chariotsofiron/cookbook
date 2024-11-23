@@ -1,7 +1,7 @@
 """Powerset."""
 
 import itertools
-from typing import Iterable, Sequence
+from collections.abc import Iterable, Sequence
 
 import pytest
 

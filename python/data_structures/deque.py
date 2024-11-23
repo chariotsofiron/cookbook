@@ -3,7 +3,7 @@
 Can be made a circular queue by popping when getting to a certain size.
 """
 
-from typing import Iterator
+from collections.abc import Iterator
 
 
 class Deque:

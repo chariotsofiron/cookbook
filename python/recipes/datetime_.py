@@ -9,9 +9,8 @@
 - <https://blog.ganssle.io/articles/2019/11/utcnow.html>
 """
 
-from datetime import datetime, timedelta, timezone
-
 import zoneinfo
+from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 # show available timezones

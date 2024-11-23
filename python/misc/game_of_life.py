@@ -4,7 +4,7 @@
 """
 
 import itertools
-from typing import Iterator
+from collections.abc import Iterator
 
 N_ROWS = 16
 N_COLS = 16

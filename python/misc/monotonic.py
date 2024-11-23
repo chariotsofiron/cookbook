@@ -16,7 +16,7 @@ Discussed here:
 
 """
 
-from typing import Iterable
+from collections.abc import Iterable
 
 import pytest
 
@@ -30,10 +30,8 @@ def monotonic(nums: Iterable[int]) -> Iterable[list[int]]:
     run = []
     for num in nums:
         is_new_run = run and (
-            run[0] < run[-1]
-            and num < run[-1]
-            or run[0] > run[-1]
-            and num > run[-1]
+            (run[0] < run[-1] and num < run[-1])
+            or (run[0] > run[-1] and num > run[-1])
         )
         if is_new_run:
             yield sorted(run)

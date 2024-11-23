@@ -4,7 +4,7 @@
 - <https://rosettacode.org/wiki/Bitmap/Bresenham%27s_line_algorithm#C++>
 """
 
-from typing import Iterator
+from collections.abc import Iterator
 
 import pytest
 

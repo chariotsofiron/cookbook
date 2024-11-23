@@ -1,8 +1,9 @@
 """Snippets for handling csv files in Python."""
 
 import csv
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 
 def read_csv(path: str) -> list[list[str]]:

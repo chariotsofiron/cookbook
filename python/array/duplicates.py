@@ -1,6 +1,6 @@
 """Find duplicates."""
 
-from typing import Iterable, MutableSequence
+from collections.abc import Iterable, MutableSequence
 
 import pytest
 

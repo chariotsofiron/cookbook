@@ -1,7 +1,7 @@
 """LRU Cache."""
 
 from collections import deque
-from typing import Iterator
+from collections.abc import Iterator
 
 
 class Cache:

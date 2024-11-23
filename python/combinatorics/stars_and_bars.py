@@ -2,7 +2,7 @@
 
 import itertools
 import math
-from typing import Iterator
+from collections.abc import Iterator
 
 import pytest
 
@@ -98,7 +98,7 @@ def snb_min_bound_count(n: int, k: int, bounds: list[int]) -> int:
 
 
 def snb_upper_bound_count(n: int, k: int, bounds: list[int]) -> int:
-    """Returns the number of integer solutions to the equation
+    """Returns the number of integer solutions to the equation.
 
     x1 + x2 + x3 + ... + xk = n where xi <= bounds[i-1]
     """
@@ -120,8 +120,9 @@ def snb_upper_bound_count(n: int, k: int, bounds: list[int]) -> int:
 
 
 def snb_both_bounds(n: int, k: int, bounds: list[tuple[int, int]]) -> int:
-    adjusted_n = n - sum(l for l, _ in bounds)
-    adjusted_bounds: list[int] = [u - l for l, u in bounds]
+    """Returns the number of ways of partitioning n items into k bins."""
+    adjusted_n = n - sum(low for low, _ in bounds)
+    adjusted_bounds: list[int] = [high - low for low, high in bounds]
 
     if adjusted_n < 0:
         return 0
@@ -130,7 +131,7 @@ def snb_both_bounds(n: int, k: int, bounds: list[tuple[int, int]]) -> int:
 
 
 @pytest.mark.parametrize(
-    "n, k, expected",
+    ("n", "k", "expected"),
     [
         (
             2,
@@ -143,12 +144,13 @@ def snb_both_bounds(n: int, k: int, bounds: list[tuple[int, int]]) -> int:
     ],
 )
 def test_stars_and_bars(n: int, k: int, expected: list[list[int]]) -> None:
+    """Runs test cases."""
     assert list(stars_and_bars(n, k)) == expected
     assert list(stars_and_bars_itertools(n, k)) == expected
 
 
 @pytest.mark.parametrize(
-    "n, k, upper_bounds, expected",
+    ("n", "k", "upper_bounds", "expected"),
     [
         (1, 0, [], 0),
         (3, 2, [1, 3], 2),
@@ -160,11 +162,12 @@ def test_stars_and_bars(n: int, k: int, expected: list[list[int]]) -> None:
 def test_snb_upper_bound_count(
     n: int, k: int, upper_bounds: list[int], expected: int
 ) -> None:
+    """Runs test cases."""
     assert snb_upper_bound_count(n, k, upper_bounds) == expected
 
 
 @pytest.mark.parametrize(
-    "n, k, bounds, expected",
+    ("n", "k", "bounds", "expected"),
     [
         (4, 2, [(1, 3), (2, 4)], 2),
         (5, 3, [(1, 2), (1, 3), (1, 4)], 5),
@@ -176,4 +179,5 @@ def test_snb_upper_bound_count(
 def test_snb_both_bounds(
     n: int, k: int, bounds: list[tuple[int, int]], expected: int
 ) -> None:
+    """Runs test cases."""
     assert snb_both_bounds(n, k, bounds) == expected

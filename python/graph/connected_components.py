@@ -1,6 +1,7 @@
 """Find all the connected components in a directed graph."""
 
-from typing import Iterator, TypeVar
+from collections.abc import Iterator
+from typing import TypeVar
 
 V = TypeVar("V")
 

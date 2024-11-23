@@ -3,7 +3,7 @@
 - <https://en.wikipedia.org/wiki/Collatz_conjecture>
 """
 
-from typing import Iterator
+from collections.abc import Iterator
 
 
 def collatz(number: int) -> Iterator[int]:
