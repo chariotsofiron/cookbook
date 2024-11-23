@@ -12,4 +12,4 @@ check:
     pyright
 
 test:
-    ./.venv/bin/python -m pytest
+    python -m pytest
