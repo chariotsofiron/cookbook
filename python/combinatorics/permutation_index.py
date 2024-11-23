@@ -61,8 +61,7 @@ def compute_permutation_index(sequence: list[int]) -> int:
                 counts[j] -= 1
                 perm_number += multi_factorial(n - i - 1, counts)
                 counts[j] += 1
-        if counts[index] > 0:
-            counts[index] -= 1
+        counts[index] -= 1
     return perm_number
 
 
