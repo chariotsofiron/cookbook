@@ -44,18 +44,18 @@ def unique_permutations(sequence: list[int]) -> list[tuple[int, ...]]:
     return sorted(solutions)
 
 
-def compute_permutation_index(sequence: list[int]) -> int:
+def compute_permutation_index(permutation: tuple[int, ...]) -> int:
     """Returns the index of a permutation of a sequence.
 
     Supports duplicates.
     """
-    counts = [0] * len(set(sequence))
-    for term in sequence:
+    counts = [0] * len(set(permutation))
+    for term in permutation:
         counts[term] += 1
 
     perm_number = 0
-    n = len(sequence)
-    for i, index in enumerate(sequence):
+    n = len(permutation)
+    for i, index in enumerate(permutation):
         for j in range(index):
             if counts[j] > 0:
                 counts[j] -= 1
@@ -90,5 +90,5 @@ def test() -> None:
     """Run test cases."""
     perms = unique_permutations([0, 0, 0, 1, 1, 2])
     for i, permutation in enumerate(perms):
-        assert compute_permutation_index(list(permutation)) == i
+        assert compute_permutation_index(permutation) == i
         assert index_to_permutation(i, [3, 2, 1]) == permutation
